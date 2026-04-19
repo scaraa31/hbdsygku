@@ -12,6 +12,8 @@ let heartInterval = null;
 
 /* ─── Slide Navigation ──────────────────────── */
 function goTo(n) {
+    const music = document.getElementById('bg-music');
+  if (music && music.paused) music.play();
   const current = document.getElementById(`slide-${currentSlide}`);
   const next    = document.getElementById(`slide-${n}`);
   if (!next || n === currentSlide) return;
