@@ -82,20 +82,24 @@ function updateDots() {
 
 /* ─── Section 2: Typing Animation ──────────── */
 const message = [
-  "Happy Birthday, my love. 💗",
-  "\n\nToday is the day the world became a better place,",
-  " because you were born into it.",
-  "\n\nYou make every ordinary moment feel like magic.",
-  " Your smile is my favourite sight,",
-  " your laugh is my favourite sound,",
-  " and your heart is my favourite home.",
-  "\n\nThank you for being everything you are.",
-  " I am so lucky to have you.",
-  "\n\nThis little website is just a small token",
-  " of how much I care for you. 🌸",
-  "\n\nHappy Birthday, beautiful. ❤️"
+  "Selamat ulang tahun, sayang. 💗",
+  "\n\njujur nih yaa,",
+  " kamu tuh hal yang ga pernah aku rencanain.",
+  " Tapi justru karena kamu semuanya kerasa lebih indah.",
+  "\n\nada yg bilang, orang yang tepat datang",
+  " di waktu yang ga pernah kamu duga.",
+  " Dan aku rasa, itu kamu.",
+  "\n\nkamu ga sempurna, aku juga ngga.",
+  " Tapi entah kenapa, kita selalu nemu cara",
+  " untuk tetap saling ada.",
+  " Dan itu hal yang paling aku syukuri.",
+  "\n\nHari ini bukan cuma soal ulang tahun.",
+  " Ini soal betapa beruntungnya aku hehe",
+  " bisa kenal, dekat, dan sayang sama kamu.",
+  "\n\nSelamat ulang tahun, sayangku.",
+  " Semoga tahun ini jadi yang paling indah. ❤️",
+  "\n\ni Love you, more than you know. 🌸"
 ].join('');
-
 function startTyping() {
   const el = document.getElementById('typing-text');
   el.textContent = '';
