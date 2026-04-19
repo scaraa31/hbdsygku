@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday My Love 💗</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Floating background elements -->
+  <div id="bg-hearts"></div>
+  <div id="bg-sparkles"></div>
+  <div id="confetti-container"></div>
+
+  <!-- ===== SECTION 1: OPENING ===== -->
+  <section class="slide active" id="slide-1">
+    <div class="slide-content center-content">
+      <div class="opening-bear">🧸</div>
+      <h1 class="main-title">Happy Birthday My Love 💗</h1>
+      <p class="subtitle">I made this little world just for you</p>
+      <div class="deco-hearts">💕 💗 💕</div>
+      <button class="btn-romantic pulse-btn" onclick="goTo(2)">Open Your Birthday Surprise 🎁</button>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2: SWEET MESSAGE ===== -->
+  <section class="slide" id="slide-2">
+    <div class="slide-content center-content">
+      <div class="section-tag">✦ A Letter For You ✦</div>
+      <h2 class="section-title">My Dearest Love 💌</h2>
+      <div class="message-card">
+        <div id="typing-text" class="typing-area"></div>
+        <span class="typing-cursor">|</span>
+      </div>
+      <div class="pink-deco">❀ ❀ ❀</div>
+      <button class="btn-romantic" onclick="goTo(3)">Continue the Surprise →</button>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3: MEMORIES ===== -->
+  <section class="slide" id="slide-3">
+    <div class="slide-content">
+      <div class="section-tag">✦ Us ✦</div>
+      <h2 class="section-title">Our Beautiful Memories 📸</h2>
+      <div class="polaroid-grid">
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple1/400/400', 'The day we laughed until it hurt 💗')">
+          <img src="https://picsum.photos/seed/couple1/400/400" alt="Memory 1" loading="lazy"/>
+          <p>First Adventure 🌸</p>
+        </div>
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple2/400/400', 'My favourite kind of day ✨')">
+          <img src="https://picsum.photos/seed/couple2/400/400" alt="Memory 2" loading="lazy"/>
+          <p>Golden Afternoon ☀️</p>
+        </div>
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple3/400/400', 'You make every moment shine 💕')">
+          <img src="https://picsum.photos/seed/couple3/400/400" alt="Memory 3" loading="lazy"/>
+          <p>Beautiful Smile 😊</p>
+        </div>
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple4/400/400', 'Together is my favourite place 🌷')">
+          <img src="https://picsum.photos/seed/couple4/400/400" alt="Memory 4" loading="lazy"/>
+          <p>Perfect Moment 🌷</p>
+        </div>
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple5/400/400', 'Every memory with you is precious 💖')">
+          <img src="https://picsum.photos/seed/couple5/400/400" alt="Memory 5" loading="lazy"/>
+          <p>Forever Us 💖</p>
+        </div>
+        <div class="polaroid" onclick="openLightbox('https://picsum.photos/seed/couple6/400/400', 'A thousand more to come 🌹')">
+          <img src="https://picsum.photos/seed/couple6/400/400" alt="Memory 6" loading="lazy"/>
+          <p>Our Story 🌹</p>
+        </div>
+      </div>
+      <button class="btn-romantic" onclick="goTo(4)">Next Surprise 💝</button>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <div class="lightbox-inner">
+        <img id="lightbox-img" src="" alt="" />
+        <p id="lightbox-caption"></p>
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4: MINI GAME ===== -->
+  <section class="slide" id="slide-4">
+    <div class="slide-content center-content">
+      <div class="section-tag">✦ Play With Me ✦</div>
+      <h2 class="section-title">Catch the Hearts 💘</h2>
+      <p class="game-desc">Click every heart before they escape! Reach <strong>15</strong> to win 💗</p>
+      <div class="score-display">Score: <span id="score">0</span> / 15</div>
+      <div id="game-area">
+        <div id="game-msg" class="game-msg hidden">You're amazing 💗</div>
+      </div>
+      <div id="game-controls">
+        <button class="btn-romantic small-btn" id="start-btn" onclick="startGame()">Start Game 💘</button>
+      </div>
+      <button class="btn-romantic" id="unlock-btn" style="display:none" onclick="goTo(5)">Unlock Your Gift 🎁</button>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5: BIRTHDAY CAKE ===== -->
+  <section class="slide" id="slide-5">
+    <div class="slide-content center-content">
+      <div class="section-tag">✦ Make a Wish ✦</div>
+      <h2 class="section-title">Happy Birthday! 🎂</h2>
+      <div class="cake-wrapper">
+        <div class="candles-row" id="candles-row">
+          <div class="candle"><div class="flame" id="f1"></div></div>
+          <div class="candle"><div class="flame" id="f2"></div></div>
+          <div class="candle"><div class="flame" id="f3"></div></div>
+          <div class="candle"><div class="flame" id="f4"></div></div>
+          <div class="candle"><div class="flame" id="f5"></div></div>
+        </div>
+        <div class="cake-body">
+          <div class="cake-top">
+            <span class="cake-deco">🌸 Happy Birthday 🌸</span>
+          </div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+        <div class="wish-text hidden" id="wish-text">Make a wish 💗</div>
+      </div>
+      <button class="btn-romantic glow-btn" id="blow-btn" onclick="blowCandles()">Blow the Candles 🕯️</button>
+      <button class="btn-romantic hidden" id="final-btn" onclick="goTo(6)">Final Message 💌</button>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 6: FINAL MESSAGE ===== -->
+  <section class="slide" id="slide-6">
+    <div class="slide-content center-content">
+      <div class="final-bear">🧸</div>
+      <div class="section-tag">✦ Always & Forever ✦</div>
+      <h2 class="section-title final-title">My Heart, My Everything ❤️</h2>
+      <div class="final-card">
+        <p>Even though I couldn't give you a physical gift,<br/>I made this little website just for you.</p>
+        <p>Every line of code here was written with love,<br/>every animation crafted with care,<br/>every word typed with my whole heart.</p>
+        <p>You deserve the whole world, and I promise<br/>I'll spend every day trying to give it to you.</p>
+        <p class="final-sign"><em>Happy Birthday, my love ❤️</em></p>
+      </div>
+      <div class="deco-row">🌸 💗 🌸 💗 🌸</div>
+      <button class="btn-romantic love-btn" id="love-btn" onclick="loveExplosion()">I Love You 💗</button>
+      <div class="restart-wrap">
+        <button class="btn-subtle" onclick="goTo(1)">↩ Replay the Magic</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide progress dots -->
+  <div id="progress-dots">
+    <span class="dot active" onclick="goTo(1)"></span>
+    <span class="dot" onclick="goTo(2)"></span>
+    <span class="dot" onclick="goTo(3)"></span>
+    <span class="dot" onclick="goTo(4)"></span>
+    <span class="dot" onclick="goTo(5)"></span>
+    <span class="dot" onclick="goTo(6)"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
