@@ -82,24 +82,24 @@ function updateDots() {
 
 /* ─── Section 2: Typing Animation ──────────── */
 const message = [
-  "Selamat ulang tahun, sayang. 💗",
-  "\n\nJujur nih ya,",
-  " kamu tuh hal yang ga pernah aku rencanain.",
-  " Tapi justru karena kamu, semuanya kerasa lebih indah.",
-  "\n\nAda yang bilang, orang yang tepat datang",
-  " di waktu yang ga pernah kamu duga.",
-  " Dan aku rasa, itu kamu.",
-  "\n\nKamu ga sempurna, aku juga ngga.",
-  " Tapi entah kenapa, kita selalu nemu cara",
-  " untuk tetap saling ada.",
-  " Dan itu hal yang paling aku syukuri.",
-  "\n\nHari ini bukan cuma soal ulang tahun.",
-  " Ini soal betapa beruntungnya aku,",
-  " bisa kenal, dekat, dan sayang sama kamu.",
-  "\n\nSelamat ulang tahun, sayangku.",
-  " Semoga tahun ini jadi yang paling indah. ❤️",
-  "\n\nI love you, more than you know. 🌸"
-].join('');
+  "Semesta punya cara kerjanya sendiri,",
+  " dan aku tidak pernah benar-benar mengerti,",
+  " sampai akhirnya ia mengirimkan kamu.",
+  "\n\nBukan dengan petir, bukan dengan tanda-tanda besar.",
+  " Hanya dengan kehadiranmu yang pelan,",
+  " yang tanpa sadar sudah mengubah cara aku",
+  " memandang hal-hal kecil di sekitar.",
+  "\n\nSeperti gravitasi yang bekerja diam-diam,",
+  " tidak terasa, tidak terlihat,",
+  " tapi nyata. Selalu nyata.",
+  "\n\nDan kini aku sadar,",
+  " bahwa jatuh bukan selalu soal kehilangan.",
+  " Kadang jatuh adalah cara semesta",
+  " untuk mempertemukanmu dengan tempat",
+  " yang paling tepat untuk pulang.",
+  "\n\nSelamat ulang tahun, sayangku. \u2764\uFE0F",
+  "\n\nI love you, more than you know. \uD83C\uDF38"
+].join("");
 function startTyping() {
   const el = document.getElementById('typing-text');
   el.textContent = '';
