@@ -94,7 +94,7 @@ const message = [
   " untuk tetap saling ada.",
   " Dan itu hal yang paling aku syukuri.",
   "\n\nHari ini bukan cuma soal ulang tahun.",
-  " Ini soal betapa beruntungnya aku hehe,",
+  " Ini soal betapa beruntungnya aku,",
   " bisa kenal, dekat, dan sayang sama kamu.",
   "\n\nSelamat ulang tahun, sayangku.",
   " Semoga tahun ini jadi yang paling indah. ❤️",
